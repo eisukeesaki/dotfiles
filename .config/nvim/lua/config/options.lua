@@ -13,7 +13,8 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = vim.fn.stdpath('data') .. '/undodir' -- For Linux and Windows
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" -- For Linux
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
