@@ -1,3 +1,5 @@
+require('nvim-autopairs').remove_rule('`')
+
 return {
   {
     'windwp/nvim-autopairs',

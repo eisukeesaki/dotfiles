@@ -31,8 +31,7 @@ vim.opt.colorcolumn = "80"
 
 vim.opt["guicursor"] = ""
 
--- vim.diagnostic.disable()
-
+vim.diagnostic.config({ virtual_text = false })
 -- vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -41,6 +40,26 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.shiftwidth = 2
     vim.bo.tabstop = 2
     vim.bo.softtabstop = 2
+    vim.bo.expandtab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cpp",
+  callback = function()
+    vim.bo.shiftwidth = 3
+    vim.bo.tabstop = 3
+    vim.bo.softtabstop = 3
+    vim.bo.expandtab = true
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "javascript",
+  callback = function()
+    vim.bo.shiftwidth = 3
+    vim.bo.tabstop = 3
+    vim.bo.softtabstop = 3
     vim.bo.expandtab = true
   end,
 })
