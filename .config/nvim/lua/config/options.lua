@@ -31,6 +31,8 @@ vim.opt.colorcolumn = "80"
 
 vim.opt["guicursor"] = ""
 
+vim.opt.splitright = true
+
 vim.diagnostic.config({ virtual_text = false })
 -- vim.opt.clipboard = "unnamedplus"
 
