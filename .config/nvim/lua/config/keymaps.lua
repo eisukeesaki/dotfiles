@@ -34,7 +34,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("n", "Q", "<nop>")
 
 -- bind-key -r f run-shell "tmux neww ~/.local/bin/tmux-sessionizer"
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.scripts/tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.scripts/tmux-sessionizer<CR>")
 
 -- toggle visual output of [LSP, linter]. it is disabled by default in options.lua
 vim.api.nvim_set_keymap('n', '<leader>L', '<cmd>lua if vim.diagnostic.config().virtual_text then vim.diagnostic.config({ virtual_text = false }) else vim.diagnostic.config({ virtual_text = true }) end<CR>', { noremap = true, silent = true })
